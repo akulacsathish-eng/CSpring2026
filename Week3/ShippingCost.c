@@ -10,22 +10,27 @@ int main(void) {
     printf("Member? (Y/N): ");
     scanf(" %c", &member);
 
-    if (weight <= 0.0) {
+    if (weight <= 0.0) 
+    {
         printf("Invalid weight.\n");
         return 0;
     }
 
-    if (weight <= 1.0) {
+    if (weight <= 1.0) 
+    {
         baseCost = 4.99;
-    } else if (weight <= 5.0) {
+    } else if (weight <= 5.0)
+    {
         baseCost = 9.99;
-    } else {
+    } else 
+    {
         baseCost = 14.99;
     }
 
     finalCost = baseCost;
 
-    if (member == 'Y' || member == 'y') {
+    if (member == 'Y' || member == 'y')
+     {
         finalCost = baseCost * 0.90;  // 10% discount
     }
 

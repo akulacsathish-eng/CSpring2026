@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+ {
     int temp;
     char home;
 
@@ -10,15 +11,22 @@ int main(void) {
     printf("Is someone home? (Y/N): ");
     scanf(" %c", &home);
 
-    if (temp < 40 || temp > 100) {
+    if (temp < 40 || temp > 100) 
+    {
         printf("Invalid temperature.\n");
-    } else if (home == 'N' || home == 'n') {
+    } 
+    else if (home == 'N' || home == 'n') {
         printf("Eco mode ON (no one home).\n");
-    } else if (temp < 68) {
+    } 
+    else if (temp < 68) 
+    {
         printf("Heat ON.\n");
-    } else if (temp > 75) {
+    } 
+    else if (temp > 75) 
+    {
         printf("Air conditioning ON.\n");
-    } else {
+    } 
+    else {
         printf("System OFF (comfortable range).\n");
     }
 

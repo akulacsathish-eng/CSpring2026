@@ -12,10 +12,12 @@ int main(void) {
     if (attendance <= 70.0) 
     {
         printf("Not eligible: attendance too low.\n");
-    } else if (quizAvg < 60.0) 
+    } 
+    else if (quizAvg < 60.0) 
     {
         printf("Not eligible: quiz average too low.\n");
-    } else 
+    } 
+    else 
     {
         printf("Eligible for the exam.\n");
     }

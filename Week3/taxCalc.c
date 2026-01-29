@@ -11,11 +11,16 @@ int main(void) {
         return 0;
     }
 
-    if (income <= 10000.0) {
+    if (income <= 10000.0) 
+    {
         tax = 0.0;
-    } else if (income <= 40000.0) {
+    } 
+    else if (income <= 40000.0) 
+    {
         tax = income * 0.10;
-    } else {
+    } 
+    else 
+    {
         tax = income * 0.20;
     }
 
