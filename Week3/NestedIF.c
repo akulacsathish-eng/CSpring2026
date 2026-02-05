@@ -24,6 +24,13 @@ int main()
     else if(studGrade>=80)
     {
         printf("\nGrade = B\n");
+
+        if(studGrade>=85)
+            printf("\nB-\n");
+        else
+            printf("\B+");
+
+
     }
     else if(studGrade>=70)
     {
