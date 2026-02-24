@@ -2,47 +2,51 @@
 
 int main() {
     int a, b;
-    char op;
+    char op = 'a';
+    while(op != 'q')
+    {
+        printf("Enter operator (+, -, *, /, %%) q for quit: ");
+        scanf(" %c", &op);
 
-    printf("Enter first number: ");
-    scanf("%d", &a);
+        printf("Enter first number: ");
+        scanf("%d", &a);
+        
+        printf("Enter second number: ");
+        scanf("%d", &b);
 
-    printf("Enter operator (+, -, *, /, %%): ");
-    scanf(" %c", &op);
+        switch (op) {
+            case '+':
+                printf("Result = %d\n", a + b);
+                break;
 
-    printf("Enter second number: ");
-    scanf("%d", &b);
+            case '-':
+                printf("Result = %d\n", a - b);
+                break;
 
-    switch (op) {
-        case '+':
-            printf("Result = %d\n", a + b);
-            break;
+            case '*':
+                printf("Result = %d\n", a * b);
+                break;
 
-        case '-':
-            printf("Result = %d\n", a - b);
-            break;
+            case '/':
+                if (b != 0)
+                    printf("Result = %d\n", a / b);
+                else
+                    printf("Error: Division by zero\n");
+                break;
 
-        case '*':
-            printf("Result = %d\n", a * b);
-            break;
+            case '%':
+                if (b != 0)
+                    printf("Result = %d\n", a % b);
+                else
+                    printf("Error: Modulo by zero\n");
+                break;
+            case 'q':
+                printf("Thank you!");
+                break;
 
-        case '/':
-            if (b != 0)
-                printf("Result = %d\n", a / b);
-            else
-                printf("Error: Division by zero\n");
-            break;
-
-        case '%':
-            if (b != 0)
-                printf("Result = %d\n", a % b);
-            else
-                printf("Error: Modulo by zero\n");
-            break;
-
-        default:
-            printf("Invalid operator\n");
+            default:
+                printf("Invalid operator\n");
+        }
     }
-
     return 0;
 }
