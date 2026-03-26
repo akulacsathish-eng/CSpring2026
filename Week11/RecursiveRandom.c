@@ -11,8 +11,19 @@
     Requirements:
     - Use recursion (no loops)
     - Use a GLOBAL variable to track the previous roll
-    - Count how many rolls (turns) it takes
+    - Count how many rolls  it takes
     - Print each roll
+// syntax for random int min = 0, max = 100; 
+int randomInRange = rand() % (max - min + 1) + min;
+    int main() {
+    srand(time(NULL));  // seed random generator
+
+    int totalTurns = rollDiceRecursive();
+
+    printf("\nTwo consecutive 6s achieved!\n");
+    printf("Total rolls needed: %d\n", totalTurns);
+    return 0;
+}
 */
 
 
@@ -20,6 +31,7 @@ int prevRoll = 0;
 
 
 int rollDiceRecursive(int turns) {
+  
     int roll = rand() % 6 + 1;
     printf("Roll %d: %d\n", turns + 1, roll);
 
