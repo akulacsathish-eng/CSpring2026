@@ -8,6 +8,7 @@ int main() {
     printf("Enter 5 integers:\n");
     for (i = 0; i < 5; i++) {
         scanf("%d", &arr[i]);
+        //printf("arr[%d] = %d\n", i, arr[i]);
     }
 
     // Output
